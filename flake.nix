@@ -19,7 +19,7 @@
         
     };
 
-    outputs = { self, nixpkgs, sytlix, home-manager, ... }@inputs: let
+    outputs = { self, nixpkgs, home-manager, stylix, ... }@inputs: let
     
         system = "x86_64-linux";
         pkgs = import nixpkgs { inherit system; };   
@@ -35,6 +35,8 @@
                 modules = [
 
                     ./hosts/nixos/configuration.nix
+		    ./hosts/nixos/modules.nix
+		    ./users/modules/stylix.nix
 
 		    stylix.nixosModules.stylix
                     

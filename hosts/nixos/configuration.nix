@@ -12,7 +12,6 @@
     imports =
         [ # include the results of the hardware scan
             ./hardware-configuration.nix
-            ../../modules/common.nix
         ];
 
     boot.consoleLogLevel = 3;
