@@ -12,23 +12,7 @@
     imports =
         [ # include the results of the hardware scan
             ./hardware-configuration.nix
-            
-            ./btrfs.nix
-            ./zram-swap.nix
-            ./nvidia.nix
-            ./pipewire.nix
-            ./epson.nix
-            
-            ./google-dns.nix
-            ./ssh.nix
-            ./ssh-agent.nix
-            
-            ./gnome.nix
-            ./gnome-min.nix
-            # ./hyprland.nix
-            
-            ./steam.nix
-
+            ../../modules/common.nix
         ];
 
     boot.consoleLogLevel = 3;

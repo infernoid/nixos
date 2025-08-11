@@ -28,7 +28,7 @@
                 specialArgs = { inherit inputs; };
                 
                 modules = [
-                    ./configuration.nix
+                    ./hosts/fsociety/configuration.nix
                     
                     # enable Home Manager as a NixOS module
                     home-manager.nixosModules.home-manager
