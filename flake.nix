@@ -11,6 +11,11 @@
             url = "github:nix-community/home-manager/release-25.05";
             inputs.nixpkgs.follows = "nixpkgs";
         };
+
+        stylix = {
+            url = "github:nix-community/stylix/release-25.05";
+            inputs.nixpkgs.follows = "nixpkgs";
+        };
         
     };
 
@@ -28,7 +33,10 @@
                 specialArgs = { inherit inputs; };
                 
                 modules = [
-                    ./hosts/fsociety/configuration.nix
+
+                    ./hosts/nixos/configuration.nix
+
+		    stylix.nixosModules.stylix
                     
                     # enable Home Manager as a NixOS module
                     home-manager.nixosModules.home-manager
