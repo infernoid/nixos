@@ -1,4 +1,5 @@
 { ... }: {
+
     imports = [
 
         ./btrfs.nix
@@ -12,10 +13,10 @@
         ./google-dns.nix
 
         # ./git.nix
-        ./gnome.nix
-        ./gnome-min.nix
-
-        # ./hyprland.nix
+        # ./gnome.nix
+        # ./gnome-min.nix
+        ./hyprland.nix
+        
         ./steam.nix
 
     ];

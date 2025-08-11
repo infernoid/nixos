@@ -22,7 +22,7 @@
     in {
     
         nixosConfigurations = {
-            fsociety = nixpkgs.lib.nixosSystem {
+            nixos = nixpkgs.lib.nixosSystem {
             
                 inherit system;
                 specialArgs = { inherit inputs; };
