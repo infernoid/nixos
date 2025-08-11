@@ -1,18 +1,23 @@
-{ ... }:
-{
-  imports = [
-    ./btrfs.nix
-    ./git.nix
-    ./gnome.nix
-    ./gnome-min.nix
-    ./google-dns.nix
-    ./hyprland.nix
-    ./nvidia.nix
-    ./pipewire.nix
-    ./ssh.nix
-    ./ssh-agent.nix
-    ./steam.nix
-    ./zram-swap.nix
-    ./epson.nix
-  ];
+{ ... }: {
+    imports = [
+
+        ./btrfs.nix
+        ./nvidia.nix
+        ./pipewire.nix
+        ./zram-swap.nix
+        ./epson.nix
+
+        ./ssh.nix
+        ./ssh-agent.nix
+        ./google-dns.nix
+
+        # ./git.nix
+        ./gnome.nix
+        ./gnome-min.nix
+
+        # ./hyprland.nix
+        ./steam.nix
+
+    ];
+    
 }
