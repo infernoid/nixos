@@ -34,11 +34,9 @@
                 
                 modules = [
 
+		    stylix.nixosModules.stylix
                     ./hosts/nixos/configuration.nix
 		    ./hosts/nixos/modules.nix
-		    ./users/modules/stylix.nix
-
-		    stylix.nixosModules.stylix
                     
                     # enable Home Manager as a NixOS module
                     home-manager.nixosModules.home-manager

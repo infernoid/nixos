@@ -15,6 +15,7 @@
         # ../modules/gnome.nix
 	# ../modules/gnome-min.nix
         ../modules/hyprland.nix
+	../modules/stylix.nix
         
         ../modules/steam.nix
 
