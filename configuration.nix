@@ -31,6 +31,8 @@
 	    # ./stylix.nix
 
 	    ./git.nix
+	    ./zsh.nix
+	    ./starship.nix
 	    ./steam.nix
 
 	    # ./config/gc.nix
@@ -74,6 +76,7 @@
     users.users.yutani = {
         isNormalUser = true;
         extraGroups = [ "wheel" "networkmanager" "scanner" "lp" "lpadmin" ]; # Enable ‘sudo’ for the user.
+	shell = pkgs.zsh;
         # packages = with pkgs; [
         # ];
     };
