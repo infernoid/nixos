@@ -32,7 +32,7 @@
 
 	    ./git.nix
 	    ./zsh.nix
-	    ./starship.nix
+	    #./starship.nix
 	    ./steam.nix
 
 	    # ./config/gc.nix
