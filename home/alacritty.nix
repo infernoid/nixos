@@ -8,9 +8,9 @@
 
 	settings = {
 
-            import = [{
-	    	"/files/alacritty-dracula-theme.yml"
-            }];
+            import = [
+	    	"alacritty-dracula-theme.yml"
+            ];
 
             font = {
                 size = 14;
