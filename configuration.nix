@@ -12,6 +12,27 @@
     imports =
         [ # include the results of the hardware scan
             ./hardware-configuration.nix
+	    
+	    ./btrfs.nix
+	    ./zram-swap.nix
+	    ./nvidia.nix
+	    ./pipewire.nix
+	    ./epson.nix
+
+	    ./ssh.nix
+	    ./ssh-agent.nix
+	    ./google-dns.nix
+
+            # ./gnome.nix
+	    # ./gnome-min.nix
+	    ./hyprland.nix
+	    ./stylix.nix
+
+	    ./git.nix
+	    ./steam.nix
+
+	    # ./config/gc.nix
+
         ];
 
     boot.consoleLogLevel = 3;
@@ -19,7 +40,7 @@
     boot.loader.systemd-boot.enable = true;
     boot.loader.efi.canTouchEfiVariables = true;
 
-    networking.hostName = "nixos"; # define your hostname
+    networking.hostName = "fsociety"; # define your hostname
     # Pick only one of the below networking options.
     # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
     networking.networkmanager.enable = true;  # Easiest to use and most distros use this by default.

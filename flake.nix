@@ -27,7 +27,7 @@
     in {
     
         nixosConfigurations = {
-            nixos = nixpkgs.lib.nixosSystem {
+            fsociety = nixpkgs.lib.nixosSystem {
             
                 inherit system;
                 specialArgs = { inherit inputs; };
@@ -35,26 +35,17 @@
                 modules = [
 
 		    stylix.nixosModules.stylix
-                    ./hosts/nixos/configuration.nix
-		    ./hosts/nixos/modules.nix
+
+                    ./configuration.nix
                     
                     # enable Home Manager as a NixOS module
-                    home-manager.nixosModules.home-manager
-                    {
-                    
-                        home-manager.extraSpecialArgs = { inherit inputs; };
-                        
+                    home-manager.nixosModules.home-manager {
+                        # home-manager.extraSpecialArgs = { inherit inputs; };
                         home-manager.useGlobalPkgs = true;
                         home-manager.useUserPackages = true;
+                        home-manager.users.yutani = import ./home.nix
+                    } 
 
-                        home-manager.users.yutani = {
-                            home.stateVersion = "25.05"; # match NixOS version
-                            # programs.bash.enable = true; # example
-                            # programs.git.enable = true;
-                        };
-                    
-                    }
-                    
                 ];
             };
         };
