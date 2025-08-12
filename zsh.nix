@@ -10,4 +10,4 @@
 
     environment.shells = with pkgs; [ zsh ];
 
-};
+}
