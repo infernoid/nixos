@@ -43,7 +43,7 @@
                         # home-manager.extraSpecialArgs = { inherit inputs; };
                         home-manager.useGlobalPkgs = true;
                         home-manager.useUserPackages = true;
-                        home-manager.users.yutani = import ./home.nix
+                        home-manager.users.yutani = import ./home.nix;
                     } 
 
                 ];
