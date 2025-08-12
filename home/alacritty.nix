@@ -11,7 +11,7 @@
             inherit (import ./files/alacritty-dracula-theme.yml);
 
             font = {
-                size = 12;
+                size = 14;
                 normal = {
                     family = "JetBrainsMono Nerd Font";
                     style = "Regular";
