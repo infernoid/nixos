@@ -8,7 +8,9 @@
 
 	settings = {
 
-            inherit (import ./files/alacritty-dracula-theme.yml);
+            import = [
+	    	"/files/alacritty-dracula-theme.yml";
+            ];
 
             font = {
                 size = 14;
