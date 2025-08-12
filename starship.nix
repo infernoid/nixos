@@ -2,37 +2,39 @@
 
 {
 
-    # Enable and configure Starship with a simple prompt
+
+    # Enable and configure Starship with the custom prompt
     programs.starship = {
         enable = true;
 
         settings = {
-            # This is the new, simple format string.
-            format = "[$username@$hostname $directory]";
+            # The entire prompt is enclosed in brackets with a red color.
+            # The format string defines the order of the modules.
+            format = "[[ $username$hostname$directory ](bold red)$character";
 
             # Configure the username module
             username = {
                 show_always = true;
-                style_user  = "bold yellow";
+                style_user  = "bold orange";
                 style_root  = "bold red";
-                format      = "[$user]($style)";
+                format      = "$user";
             };
 
             # Configure the hostname module
             hostname = {
                 ssh_only = false;
-                format   = "[@$hostname]($style)";
+                format   = "[@](bold green)$hostname";
                 style    = "bold white";
             };
 
             # Configure the directory module
             directory = {
                 truncation_length = 3;
-                style             = "bold cyan";
-                format            = " [$path]($style)";
+                style             = "bold magenta"; # Using magenta for pink
+                format            = " $path";
             };
 
-            # Configure the prompt symbol
+            # Use a single space as the prompt symbol
             character = {
                 success_symbol = " ";
                 error_symbol   = " ";
