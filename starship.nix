@@ -10,7 +10,7 @@
         settings = {
             # The entire prompt is enclosed in brackets with a red color.
             # The format string defines the order of the modules.
-            format = "[[ $username$hostname$directory ](bold red)$character";
+            format = "[[$username$hostname$directory]](bold red)";
 
             # Configure the username module
             username = {
@@ -34,11 +34,6 @@
                 format            = " $path";
             };
 
-            # Use a single space as the prompt symbol
-            character = {
-                success_symbol = " ";
-                error_symbol   = " ";
-            };
         };
     };
 
