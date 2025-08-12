@@ -15,6 +15,10 @@
            plugins = [ "git" ];
         };
 
+  promptInit = ''
+    PROMPT="%F{green}[%n@%m %F{blue}%~%F{green}]%f $ "
+  '';
+
     };
 
     users.defaultUserShell = pkgs.zsh;
