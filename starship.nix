@@ -46,19 +46,19 @@
                 format = "[ on ]($style)[$symbol$branch]($style) ";
             };
 
-            # The Git status module (modified, added, etc.)
+            # The corrected Git status module (modified, added, etc.)
             git_status = {
-                format      = "([$all_status$stashed]($style))";
+                format      = "([$$all_status$$stashed]($style))";
                 style       = "bold green";
-                ahead       = "${count}";
-                behind      = "${count}";
-                diverged    = "${count}${count}";
-                untracked   = "${count}";
-                stashed     = "${count}";
-                modified    = "${count}";
-                staged      = "${count}";
-                renamed     = "${count}";
-                deleted     = "${count}";
+                ahead       = "$${count}";
+                behind      = "$${count}";
+                diverged    = "$${count}$${count}";
+                untracked   = "$${count}";
+                stashed     = "$${count}";
+                modified    = "$${count}";
+                staged      = "$${count}";
+                renamed     = "$${count}";
+                deleted     = "$${count}";
             };
         };
     };
