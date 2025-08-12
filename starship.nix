@@ -46,9 +46,10 @@
                 format = "[ on ]($style)[$symbol$branch]($style) ";
             };
 
-            # The corrected Git status module (modified, added, etc.)
+            # The corrected Git status module
             git_status = {
-                format      = "([$$all_status$$stashed]($style))";
+                # Use a multi-line string (''...'' ) to pass the format string correctly
+                format      = "([$all_status$stashed]($style))";
                 style       = "bold green";
                 ahead       = "$${count}";
                 behind      = "$${count}";
