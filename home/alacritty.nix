@@ -9,7 +9,7 @@
 	settings = {
 
             import = [{
-	    	"/files/alacritty-dracula-theme.yml";
+	    	"/files/alacritty-dracula-theme.yml"
             }];
 
             font = {
