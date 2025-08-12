@@ -8,7 +8,7 @@
 
         settings = {
             # This is the new, simple format string.
-            format = "$username$hostname $directory$character";
+            format = "[$username@$hostname $directory]";
 
             # Configure the username module
             username = {
