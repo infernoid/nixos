@@ -6,7 +6,7 @@
 
         enable = true;
 
-	setting = {
+	settings = {
 
             font = {
                 size = 12.0;
