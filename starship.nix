@@ -2,22 +2,19 @@
 
 {
 
-
-    # Enable and configure Starship with the custom prompt
     programs.starship = {
         enable = true;
 
         settings = {
-            # The entire prompt is enclosed in brackets with a red color.
-            # The format string defines the order of the modules.
-            format = "[[$username$hostname$directory]](bold red)";
+            # The format string now just defines the order of the modules
+            format = "$username$hostname$directory$character";
 
-            # Configure the username module
+            # Configure the username module to include the opening bracket
             username = {
                 show_always = true;
                 style_user  = "bold orange";
                 style_root  = "bold red";
-                format      = "$user";
+                format      = "[[>](bold red)$user]($style)";
             };
 
             # Configure the hostname module
@@ -27,13 +24,18 @@
                 style    = "bold white";
             };
 
-            # Configure the directory module
+            # Configure the directory module to include the closing bracket
             directory = {
                 truncation_length = 3;
-                style             = "bold magenta"; # Using magenta for pink
-                format            = " $path";
+                style             = "bold magenta";
+                format            = " [$path]($style)[<](bold red) ";
             };
-
+            
+            # Use a single space as the prompt symbol
+            character = {
+                success_symbol = " ";
+                error_symbol   = " ";
+            };
         };
     };
 
