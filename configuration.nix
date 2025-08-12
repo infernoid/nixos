@@ -28,7 +28,7 @@
             # ./gnome.nix
 	    # ./gnome-min.nix
 	    ./hyprland.nix
-	    ./stylix.nix
+	    # ./stylix.nix
 
 	    ./git.nix
 	    ./steam.nix
