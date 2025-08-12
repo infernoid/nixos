@@ -6,7 +6,7 @@
 
     imports =
         [
-	    ./alacritty.nix
+	    ./home/alacritty.nix
 	];
 
     home.stateVersion = "25.05";

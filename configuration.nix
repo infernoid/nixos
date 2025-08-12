@@ -23,6 +23,8 @@
 	    ./ssh-agent.nix
 	    ./google-dns.nix
 
+	    ./fonts.nix
+
             # ./gnome.nix
 	    # ./gnome-min.nix
 	    ./hyprland.nix

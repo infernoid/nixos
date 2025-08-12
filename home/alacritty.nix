@@ -1,0 +1,36 @@
+{ config, pkgs, ... }:
+
+{
+
+    programs.alacritty = {
+
+        enable = true;
+
+	settings = {
+
+            inherit (import ./files/alacritty-dracula-theme.yml);
+
+            font = {
+                size = 12;
+                normal = {
+                    family = "JetBrainsMono Nerd Font";
+                    style = "Regular";
+                };
+                bold = {
+                    family = "JetBrainsMono Nerd Font";
+                    style = "Bold";
+                };
+                italic = {
+                    family = "JetBrainsMono Nerd Font";
+                    style = "Italic";
+                };
+                bold_italic = {
+                    family = "JetBrainsMono Nerd Font";
+                    style = "Bold Italic";
+                };
+
+            }; # font
+
+        };
+    };
+}
